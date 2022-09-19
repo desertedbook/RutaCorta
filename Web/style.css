@@ -1,0 +1,74 @@
+body{ 
+    margin: 0;
+}
+
+#contenedor{
+    height: 900px;
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+#form{ 
+    height: 900px; 
+    width: 500px;
+    margin: auto;
+    border: 1px solid ghostwhite;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+    font-size: 20px;
+}
+
+#map{
+    margin: auto;
+    height: 900px; 
+    width: 1200px;
+}
+
+#titulo{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    color: #0d6efd;
+}
+
+.div_op{
+    margin: 0px;
+    padding: 0px;
+}
+
+#botones{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#div_opciones{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.div_opcion_col{
+    width: 200px;
+}
+
+#bt1, #bt2{
+    width: 200px;
+}
+
+#valores{
+    margin-top: 30px;
+    margin-bottom: 200px;
+    width: 400px;
+    margin-left: 50px;
+}
+
+#distancia{
+    font-size: 25px;
+    align-self: center;
+}

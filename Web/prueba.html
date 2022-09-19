@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+    <script type="text/javascript" src="/eel.js"></script>
+
+    <script>
+        function obtener_opciones_selecionadas(){
+            var opciones = [];
+            
+            if(document.getElementById('op0').checked){
+                opciones.push('0');
+            }
+            if(document.getElementById('op1').checked){
+                opciones.push('1');
+            }
+            if(document.getElementById('op2').checked){
+                opciones.push('2');
+            }
+            if(document.getElementById('op3').checked){
+                opciones.push('3');
+            }
+            if(document.getElementById('op4').checked){
+                opciones.push('4');
+            }
+            if(document.getElementById('op5').checked){
+                opciones.push('5');
+            }
+            if(document.getElementById('op6').checked){
+                opciones.push('6');
+            }
+            if(document.getElementById('op7').checked){
+                opciones.push('7');
+            }
+            if(document.getElementById('op8').checked){
+                opciones.push('8');
+            }
+            if(document.getElementById('op9').checked){
+                opciones.push('9');
+            }
+            if(document.getElementById('op10').checked){
+                opciones.push('10');
+            }
+            if(document.getElementById('op11').checked){
+                opciones.push('11');
+            }
+            if(document.getElementById('op12').checked){
+                opciones.push('12');
+            }
+            if(document.getElementById('op13').checked){
+                opciones.push('13');
+            }
+            if(document.getElementById('op14').checked){
+                opciones.push('14');
+            }
+            if(document.getElementById('op15').checked){
+                opciones.push('15');
+            }
+            if(document.getElementById('op16').checked){
+                opciones.push('16');
+            }
+            if(document.getElementById('op17').checked){
+                opciones.push('17');
+            }
+            if(document.getElementById('op18').checked){
+                opciones.push('18');
+            }
+            if(document.getElementById('op19').checked){
+                opciones.push('19');
+            }
+            if(document.getElementById('op20').checked){
+                opciones.push('20');
+            }
+            if(document.getElementById('op21').checked){
+                opciones.push('21');
+            }
+            if(document.getElementById('op22').checked){
+                opciones.push('22');
+            }
+            if(document.getElementById('op23').checked){
+                opciones.push('23');
+            }
+            if(document.getElementById('op24').checked){
+                opciones.push('24');
+            }
+            
+            eel.Posibles_rutas(opciones);
+        }
+    </script>
+
+    <script>
+        function Recargar(){
+            location.reload();
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="contenedor">
+        <div id="form">
+            <h1 id="titulo">SELECCIONAR DESTINOS</h1>
+
+            <div id="div_opciones">
+                <div class="div_opcion_col">
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op0" name="op0">
+                        <label for="op0">ACAPULCO</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op1" name="op1">
+                        <label for="op1">CHETUMAL</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op2" name="op2">
+                        <label for="op2">CHIHUAHUA</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op3" name="op3">
+                        <label for="op3">CD.JUAREZ</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op4" name="op4">
+                        <label for="op4">DURANGO</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op5" name="op5">
+                        <label for="op5">GUADALAJARA</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op6" name="op6">
+                        <label for="op6">GUANAJUATO</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op7" name="op7">
+                        <label for="op7">HERMOSILLO</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op8" name="op8">
+                        <label for="op8">LA PAZ</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op9" name="op9">
+                        <label for="op9">MANZANILLO</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op10" name="op10">
+                        <label for="op10">MATAMOROS</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op11" name="op11">
+                        <label for="op11">MERIDA</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op12" name="op12">
+                        <label for="op12">MEXICO DF</label>
+                    </p>
+                </div>
+
+                <div class="div_opcion_col">
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op13" name="op13">
+                        <label for="op13">NOGALES</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op14" name="op14">
+                        <label for="op14">NVO.LAREDO</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op15" name="op15">
+                        <label for="op15">OAXACA</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op16" name="op16">
+                        <label for="op16">PIEDRAS NEGRAS</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op17" name="op17">
+                        <label for="op17">PUEBLA</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op18" name="op18">
+                        <label for="op18">QUERETARO</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op19" name="op19">
+                        <label for="op19">SAN LUIS POTOSI</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op20" name="op20">
+                        <label for="op20">TAMPICO</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op21" name="op21">
+                        <label for="op21">TAPACHULA</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op22" name="op22">
+                        <label for="op22">TIJUANA</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op23" name="op23">
+                        <label for="op23">VERACRUZ</label>
+                    </p>
+                    <p class="div_op">
+                        <input class="form-check-input" type="checkbox" id="op24" name="op24">
+                        <label for="op24">VILLAHERMOSA</label>
+                    </p>
+                    <p></p> 
+                </div>
+            </div>
+
+            <div id="valores">
+                <label id="distancia">Distancia: </label>
+            </div>
+            
+            <div id="botones">
+                <input type="button" class="btn btn-primary" id="bt1" value="GENERAR RUTA" onclick="obtener_opciones_selecionadas()">
+                <input type="button" class="btn btn-danger" id="bt2" value="LIMPIAR" onclick="Recargar()">
+            </div>
+            
+        </div>
+        
+        <div id="map"></div>  
+    </div>
+
+    
+    
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+
+    <script>
+        let map = L.map('map').setView([23.634501,-102.552784],5)
+        //Agregar tilelAyer mapa base desde openstreetmap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,}).addTo(map);
+
+        eel.expose(Desplegar_rutas);
+        function Desplegar_rutas(coordenadas,nom_coordenadas,menor_ruta){
+            
+            var distancia = parseInt(menor_ruta) * 1.60934;
+            document.getElementById('distancia').innerHTML = 'Distancia: ' + distancia + ' Km';
+
+            for (let i = 0; i < coordenadas.length; i++) {
+                var nom = nom_coordenadas[i];
+
+                var lat = coordenadas[i][0]
+                lat = parseFloat(lat);
+
+                let lon = coordenadas[i][1]
+                lon = parseFloat(lon);
+
+                L.marker([lat,lon]).addTo(map).bindPopup((i+1) + '.-' + nom);
+
+                var polygon = L.polygon([
+                    [lat,lon],
+                    [coordenadas[i+1][0],coordenadas[i+1][1]],
+                    [coordenadas[i+1][0],coordenadas[i+1][1]]
+                ]).addTo(map);
+            }
+        }
+    </script>
+
+</body>
+</html>
